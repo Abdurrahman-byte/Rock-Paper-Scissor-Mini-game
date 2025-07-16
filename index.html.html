@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MINI GAME</title>
+
+  <style src="10-rock-paper-scissors.css"></style>
+  <link rel="stylesheet" href="style.css.css">
+</head>
+
+<body>
+  <p class="title">Rock Paper Scissors</p>
+  <button onclick="
+ playGame('rock');
+  "class="move-icon">
+  <img src="rock-emoji.png" class="rock"></button>
+
+  <button onclick="
+playGame('paper');
+ "class="move-icon"><img src="paper-emoji.png" class="paper"></button>
+
+  <button onclick="
+  playGame('scissors');
+  "class="move-icon"><img src="scissors-emoji.png" class="scissors"></button> 
+
+  
+  <p class="js-move">You win</p>
+  <p class="js-score">
+    You
+    <img src="scissors-emoji.png" class="scissors">
+    <img src="rock-emoji.png" class="rock">
+    computer
+  </p>
+  <p class="js-result"></p>
+  
+  <button onclick="
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElement();
+  "class="reset-score">Reset Score</button>
+
+  <button class="auto-play-button"
+  onclick="
+  autoPlay();"
+  >Auto Play</button>
+  
+ <script src="script.js.js"></script>
+</script> 
+</body>
+</html>
